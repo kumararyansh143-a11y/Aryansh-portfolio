@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============ PAGE INFO (SEO + sharing) ============ -->
+  <title>Aryansh Babu | IT Enthusiast Portfolio</title>
+  <meta name="description" content="Portfolio of Aryansh Babu, CITS trainee in Computer Software Application at NSTI Kanpur. Skills, projects, training and certifications.">
+  <meta name="author" content="Aryansh Babu">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aryansh Babu | IT Enthusiast Portfolio">
+  <meta property="og:description" content="CITS trainee (CSA) at NSTI Kanpur. Skills, projects, training and certifications.">
+  <!-- TODO: after deployment, replace with the full URL of your photo, e.g.
+       https://YOUR-USERNAME.github.io/YOUR-REPO/assets/images/profile.jpg -->
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta name="theme-color" content="#1d4ed8">
+
+  <!-- Simple "AB" favicon built in. To use your own, replace with: <link rel="icon" href="assets/images/favicon.png"> -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EAB%3C/text%3E%3C/svg%3E">
+
+  <!-- Sets the theme before the page paints, so there is no light/dark flash -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var theme = null;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ ICONS (inline SVG, used with <use href="#i-name">) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.4 2.1 5.2 2.4 5.2 2.4a5 5 0 0 0-.1 3.8A5.4 5.4 0 0 0 3.6 10c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+  </svg>
+
+  <!-- ============ HEADER / NAVIGATION ============
+       Each nav link points to a section id. If a section is empty it is hidden
+       automatically (script.js removes its link too). -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Aryansh Babu, go to top">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-name">Aryansh Babu</span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#certifications">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HOME / HERO ============
+         EDIT: name, headline, intro line, photo (assets/images/profile.jpg) -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hello, I am</p>
+          <h1 id="hero-title">Aryansh Babu</h1>
+          <p class="headline">IT Enthusiast</p>
+          <p class="hero-intro">
+            CITS trainee in Computer Software Application at NSTI Kanpur,
+            learning programming and web development and looking for chances to grow in IT.
+          </p>
+          <p class="hero-meta">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            Kanpur Nagar, Uttar Pradesh, India
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-outline" href="#contact">Contact Me</a>
+            <a class="btn btn-ghost" href="assets/documents/resume.pdf" download="Aryansh-Babu-Resume.pdf">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <!-- Shown only if the photo is missing -->
+            <span class="photo-initials" aria-hidden="true">AB</span>
+            <img src="assets/images/profile.jpg" width="599" height="974"
+                 alt="Portrait of Aryansh Babu" onerror="this.remove()">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. ABOUT ME ============
+         EDIT: keep it short and true. -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container narrow">
+        <h2 id="about-title" class="section-title reveal">About Me</h2>
+        <div class="about-text reveal" data-item>
+          <p>
+            I am a CITS trainee in Computer Software Application (CSA) at NSTI Kanpur.
+            I have built an AI Resume Builder project and completed on-the-job training in a company.
+            I know HTML, Python, Java and MySQL, along with MS Office tools.
+            I am looking for opportunities to learn and grow in the IT field.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. EDUCATION ============
+         Newest first. To add an item, copy one <li class="timeline-item" data-item> block. -->
+    <section id="education" class="section alt" aria-labelledby="education-title">
+      <div class="container narrow">
+        <h2 id="education-title" class="section-title reveal">Education</h2>
+        <ol class="timeline">
+
+          <li class="timeline-item reveal" data-item>
+            <span class="timeline-date">Session 2026-27 · Current</span>
+            <h3>CITS (Trainee)</h3>
+            <p class="item-sub">NSTI Kanpur</p>
+            <p>Trade: Computer Software Application (CSA)</p>
+          </li>
+
+          <li class="timeline-item reveal" data-item>
+            <span class="timeline-date">2025-26</span>
+            <h3>CTS (ITI, NCVT)</h3>
+            <p class="item-sub">Government Industrial Training Institute, Pandu Nagar</p>
+            <p>Result: 94.1%</p>
+          </li>
+
+          <li class="timeline-item reveal" data-item>
+            <span class="timeline-date">2024</span>
+            <h3>Diploma in Computer Application (DCA)</h3>
+            <p class="item-sub">Dynamic Computer &amp; Learning Institute</p>
+            <p>Result: 72.0%</p>
+          </li>
+
+          <li class="timeline-item reveal" data-item>
+            <span class="timeline-date">2023</span>
+            <h3>Intermediate (Class XII)</h3>
+            <p class="item-sub">Ekalavya Inter College (UP Board)</p>
+            <p>Result: 79.4%</p>
+          </li>
+
+          <li class="timeline-item reveal" data-item>
+            <span class="timeline-date">2021</span>
+            <h3>High School (Class X)</h3>
+            <p class="item-sub">Ekalavya Inter College (UP Board)</p>
+            <p>Result: 91.0%</p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 4. SKILLS ============
+         To add a skill, add <li>Skill name</li> inside the right list.
+         No percentage bars are used on purpose. -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title" class="section-title reveal">Skills</h2>
+        <div class="card-grid skills-grid">
+
+          <article class="card reveal" data-item>
+            <h3>Core Trade Skills</h3>
+            <ul class="chips">
+              <li>Operating Systems</li>
+              <li>Programming Languages</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-item>
+            <h3>Software &amp; Tools</h3>
+            <ul class="chips">
+              <li>HTML</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>MySQL</li>
+              <li>Web Development</li>
+              <li>AI Tools</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-item>
+            <h3>Computer Skills</h3>
+            <ul class="chips">
+              <li>MS Word</li>
+              <li>MS Excel</li>
+              <li>MS PowerPoint</li>
+              <li>Adobe Photoshop</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" data-item>
+            <h3>Soft Skills</h3>
+            <ul class="chips">
+              <li>Communication</li>
+              <li>Problem Solving</li>
+              <li>Teamwork</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. PROJECTS ============
+         The image is assets/images/project1.jpg. Until you add it, a neat placeholder is shown.
+
+         TO ADD A PROJECT: copy the whole <article> below and change the text. Template:
+
+         <article class="card project-card reveal" data-item>
+           <div class="project-media">
+             <svg class="icon project-icon" aria-hidden="true"><use href="#i-code"/></svg>
+             <img src="assets/images/project2.jpg" width="640" height="360" loading="lazy"
+                  alt="Short description of the project" onerror="this.remove()">
+           </div>
+           <div class="project-body">
+             <h3>Project name</h3>
+             <p>What the project does.</p>
+             <dl class="meta">
+               <div><dt>Tools used</dt><dd>List tools here</dd></div>
+               <div><dt>My contribution</dt><dd>What you did</dd></div>
+             </dl>
+             <div class="btn-row">
+               <a class="btn btn-small btn-outline" href="https://github.com/..." target="_blank" rel="noopener noreferrer">
+                 View on GitHub
+                 <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+               </a>
+             </div>
+           </div>
+         </article>
+    -->
+    <section id="projects" class="section alt" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section-title reveal">Projects</h2>
+        <div class="card-grid projects-grid">
+
+          <article class="card project-card reveal" data-item>
+            <div class="project-media">
+              <svg class="icon project-icon" aria-hidden="true"><use href="#i-code"/></svg>
+              <img src="assets/images/project1.jpg" width="640" height="360" loading="lazy"
+                   alt="Screenshot of the AI Resume Builder project" onerror="this.remove()">
+            </div>
+            <div class="project-body">
+              <h3>AI Resume Builder</h3>
+              <p>
+                A smart tool that uses Artificial Intelligence to create professional, attractive and
+                job-ready resumes quickly. It helps users generate resumes, highlight their skills and
+                improve their chances of getting a job.
+              </p>
+              <dl class="meta">
+                <div><dt>Tools used</dt><dd>ChatGPT</dd></div>
+                <div><dt>My contribution</dt><dd>Developed alone and managed every part of the project.</dd></div>
+              </dl>
+              <!-- TODO: if you have a live link or GitHub link for this project, add a button here
+                   (see the template above). No link is shown for now. -->
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. TRAINING / PRACTICAL EXPOSURE ============
+         Copy one <article class="card training-card" data-item> block to add more. -->
+    <section id="training" class="section" aria-labelledby="training-title">
+      <div class="container">
+        <h2 id="training-title" class="section-title reveal">Training &amp; Practical Exposure</h2>
+        <div class="card-grid training-grid">
+
+          <article class="card training-card reveal" data-item>
+            <span class="tag">24 Mar 2026 – 07 Apr 2026 · 15 days</span>
+            <h3>On-the-Job Training, COPA / CSA Trainee</h3>
+            <p class="item-sub">Shri Ram Biotech Pvt. Ltd., Bhauti Pratappur, Kanpur Nagar</p>
+            <ul class="bullets">
+              <li>Handled daily data entry and prepared digital documents using MS Office tools.</li>
+              <li>Assisted with basic software troubleshooting, system updates and keeping digital records.</li>
+              <li>Received a Training Completion Certificate.</li>
+            </ul>
+          </article>
+
+          <article class="card training-card reveal" data-item>
+            <span class="tag">30 days</span>
+            <h3>Trainee</h3>
+            <p class="item-sub">Unnati Foundation</p>
+            <p><strong>Skills learned:</strong> Communication skills, Time management</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. CERTIFICATIONS ============
+         TO ADD A CERTIFICATE: copy one <article class="card cert-card" data-item> block.
+         Put certificate PDFs in assets/documents/ and link them like the first one. -->
+    <section id="certifications" class="section alt" aria-labelledby="cert-title">
+      <div class="container">
+        <h2 id="cert-title" class="section-title reveal">Certifications</h2>
+        <div class="card-grid cert-grid">
+
+          <article class="card cert-card reveal" data-item>
+            <svg class="icon cert-icon" aria-hidden="true"><use href="#i-award"/></svg>
+            <h3>AI Literacy</h3>
+            <p class="item-sub">IBM SkillsBuild · 29 Oct 2026</p>
+            <div class="btn-row">
+              <a class="btn btn-small btn-outline" href="https://www.credly.com/go/xLZRFBnW" target="_blank" rel="noopener noreferrer">
+                Verify on Credly
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+              <a class="btn btn-small btn-ghost" href="assets/documents/ai-literacy-certificate.pdf" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>
+                View certificate
+              </a>
+            </div>
+          </article>
+
+          <article class="card cert-card reveal" data-item>
+            <svg class="icon cert-icon" aria-hidden="true"><use href="#i-award"/></svg>
+            <h3>Diploma in Computer Application (DCA)</h3>
+            <p class="item-sub">Dynamic Computer &amp; Learning Institute · 2024</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. CONTACT ============
+         EDIT: email, phone and links here. Keep the "mailto:" and "tel:" parts. -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container narrow">
+        <h2 id="contact-title" class="section-title reveal">Contact</h2>
+        <p class="section-lead reveal">
+          I am open to learning opportunities, training and entry-level roles in IT. You can reach me here:
+        </p>
+        <ul class="contact-list reveal" data-item>
+          <li>
+            <a class="contact-link" href="mailto:aryanshboy007@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+              <span><small>Email</small>aryanshboy007@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="tel:+916394306143">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span><small>Phone</small>+91 63943 06143</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://www.linkedin.com/in/aryansh-boy-972269309/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+              <span><small>LinkedIn</small>Aryansh Babu</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-link" href="https://github.com/kumararyansh143-a11y" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+              <span><small>GitHub</small>kumararyansh143-a11y</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Aryansh Babu. All rights reserved.</p>
+      <a href="#home">Back to top</a>
+    </div>
+  </footer>
+
+  <button id="to-top" class="to-top" type="button" aria-label="Back to top" hidden>
+    <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
+  </button>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
